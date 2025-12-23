@@ -1,0 +1,9 @@
+.venv
+.vscode
+data
+figure
+*.log
+
+.ruff_cache
+__pycache__/
+figures/
