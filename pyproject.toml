@@ -16,6 +16,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "datasets>=3.2.0<4.0.0", # keep v3 for openwebtext (2025-10-10)
     "transformers>=4.57.3",
+    "infini-gram>=2.6.0",
 ]
 
 

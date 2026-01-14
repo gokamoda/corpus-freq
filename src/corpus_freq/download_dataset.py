@@ -13,11 +13,19 @@ def main(
         "DrNicefellow/fineweb-edu-sample-1BT",
         "Skylion007/openwebtext",
         "roneneldan/TinyStories",
+        "wikimedia/wikipedia/20231101.ja",
     ]:
-        load_dataset_kwargs = {
-            "path": dataset_name,
-            "streaming": True,
-        }
+        if "wikimedia/wikipedia" in dataset_name:
+            load_dataset_kwargs = {
+                "path": "wikimedia/wikipedia",
+                "name": "20231101.ja",
+                "streaming": True,
+            }
+        else:
+            load_dataset_kwargs = {
+                "path": dataset_name,
+                "streaming": True,
+            }
         hf_main(load_dataset_kwargs, save_dir, num_processes)
     else:
         raise ValueError(f"Unsupported dataset: {dataset_name}")
