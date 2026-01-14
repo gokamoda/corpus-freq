@@ -22,8 +22,6 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
-    "ipython>=8.29.0",
-    "jupyter>=1.1.1",
     "pre-commit>=3.8.0",
     "pytest>=8.3.4",
     "ruff>=0.7.2",
@@ -113,3 +111,7 @@ line-ending = "auto"
 [tool.ty.rules]
 unresolved-attribute = "ignore"
 no-matching-overload = "ignore"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
